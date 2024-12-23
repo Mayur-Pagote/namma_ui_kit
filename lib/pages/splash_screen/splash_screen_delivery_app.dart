@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:namma_ui_kit/pages/auth_screen/auth_provider_page.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -65,7 +66,8 @@ class _SplashScreenState extends State<SplashScreen> {
                         SizedBox(height: 30),
                         Text(
                           titles[index],
-                          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(height: 15),
                         Padding(
@@ -82,38 +84,35 @@ class _SplashScreenState extends State<SplashScreen> {
                 },
               ),
             ),
-             const Positioned(
-            top: 80,
-            left: 0,
-            right: 0,
-            child: Column(
-              children: [
-                Align(
-                  alignment: Alignment.center,
-                  child:const Text(
-                    'App Name',
-                    style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  )
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child:const Text(
-                    'This is an example app',
-                    style: TextStyle(
-                      color: Colors.black
-        ,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  )
-                ),
-              ],
+            const Positioned(
+              top: 80,
+              left: 0,
+              right: 0,
+              child: Column(
+                children: [
+                  Align(
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'App Name',
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      )),
+                  Align(
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'This is an example app',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      )),
+                ],
+              ),
             ),
-          ),
             Positioned(
               bottom: 50,
               left: 0,
@@ -124,26 +123,29 @@ class _SplashScreenState extends State<SplashScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: List.generate(3, (index) {
                       return Container(
-                        width: _currentPage == index ? 20.0 : 10.0, // Wider rectangle for current page
-height: 10.0,
+                        width: _currentPage == index
+                            ? 20.0
+                            : 10.0, // Wider rectangle for current page
+                        height: 10.0,
                         margin: EdgeInsets.symmetric(horizontal: 4.0),
                         decoration: BoxDecoration(
-  shape: _currentPage == index ? BoxShape.rectangle : BoxShape.circle,
-  color: _currentPage == index 
-      ? Color.fromARGB(255, 255, 102, 31) 
-      : Color.fromARGB(255, 255, 206, 165),
-  borderRadius: _currentPage == index 
-      ? BorderRadius.circular(12.0) 
-      : null, 
-  
-),
-
+                          shape: _currentPage == index
+                              ? BoxShape.rectangle
+                              : BoxShape.circle,
+                          color: _currentPage == index
+                              ? Color.fromARGB(255, 255, 102, 31)
+                              : Color.fromARGB(255, 255, 206, 165),
+                          borderRadius: _currentPage == index
+                              ? BorderRadius.circular(12.0)
+                              : null,
+                        ),
                       );
                     }),
                   ),
                   SizedBox(height: 20),
                   ElevatedButton(
-                    child: Text('Next page', style: TextStyle(color: Colors.white)),
+                    child: Text('Next page',
+                        style: TextStyle(color: Colors.white)),
                     onPressed: () {
                       if (_currentPage < 2) {
                         _pageController.nextPage(
@@ -151,18 +153,23 @@ height: 10.0,
                           curve: Curves.easeInOut,
                         );
                       } else {
-                        
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AuthScreen()));
                         print("Splash screen completed");
                       }
                     },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(15), 
-    ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                       elevation: 0,
                       backgroundColor: Colors.orange,
-                      padding: EdgeInsets.symmetric(horizontal: 120, vertical: 15),
-                      textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 120, vertical: 15),
+                      textStyle:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
