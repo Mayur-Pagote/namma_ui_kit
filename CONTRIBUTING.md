@@ -7,7 +7,7 @@ Thank you for considering contributing to our Namma UI Kit! We appreciate your t
 All contributions should adhere to the following directory structure:
 
 ```
-/lib/pages/<your-page-name>
+/lib/<your-[page/conponent]-name>
 ```
 
 ### Folder Naming Conventions
@@ -17,7 +17,7 @@ The name should be all lowercase, with underscores to separate words, "just_like
 - **No Spaces**: Folder names should not contain spaces.
 - **Underscore Only**: Use underscores (`_`) to separate words in folder names.
 
-For example, if you are contributing a new page for a user profile, the folder name should be `/lib/pages/user_profile`.
+For example, if you are contributing a new page or component for a user profile, the folder name should be `/lib/user_profile`.
 
 ## Code Guidelines
 
@@ -39,9 +39,9 @@ To maintain the integrity and consistency of the UI kit, please follow these gui
 
 1. **Fork the Repository**: Start by forking the repository to your GitHub account.
 
-2. **Create a Branch**: Create a new branch in your forked repository for your feature or fix. Use a descriptive branch name (e.g., `/lib/pages/user-profile-page`).
+2. **Create a Branch**: Create a new branch in your forked repository for your feature or fix. Use a descriptive branch name (e.g., `/lib/user-profile-page`).
 
-3. **Implement Your Changes**: Make your changes in the appropriate folder under `/lib/pages/<your-page-name>`.
+3. **Implement Your Changes**: Make your changes in the appropriate folder under `/lib/<your-page/component-name>`.
 
 4. **Test Your Changes**: Ensure that your changes do not break any existing functionality and that they adhere to the guidelines mentioned above.
 
