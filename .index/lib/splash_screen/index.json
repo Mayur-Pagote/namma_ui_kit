@@ -1,0 +1,12 @@
+{
+  "folder": "lib\\splash_screen",
+  "totalSize": 6912,
+  "contents": [
+    {
+      "type": "file",
+      "name": "splash_screen_delivery_app.dart",
+      "path": "lib\\splash_screen\\splash_screen_delivery_app.dart",
+      "size": 6912
+    }
+  ]
+}

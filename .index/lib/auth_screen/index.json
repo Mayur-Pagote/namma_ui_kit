@@ -1,0 +1,24 @@
+{
+  "folder": "lib\\auth_screen",
+  "totalSize": 15353,
+  "contents": [
+    {
+      "type": "file",
+      "name": "auth_provider_page.dart",
+      "path": "lib\\auth_screen\\auth_provider_page.dart",
+      "size": 4520
+    },
+    {
+      "type": "file",
+      "name": "signin_page.dart",
+      "path": "lib\\auth_screen\\signin_page.dart",
+      "size": 4595
+    },
+    {
+      "type": "file",
+      "name": "signup_page.dart",
+      "path": "lib\\auth_screen\\signup_page.dart",
+      "size": 6238
+    }
+  ]
+}

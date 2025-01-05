@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:namma_ui_kit/pages/auth_screen/signin_page.dart';
+import 'package:namma_ui_kit/auth_screen/signin_page.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});

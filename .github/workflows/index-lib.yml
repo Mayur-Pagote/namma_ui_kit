@@ -1,0 +1,30 @@
+name: Indexing Files in /lib
+
+on:
+  pull_request:
+    types: [closed] # Trigger on pull request merge
+
+jobs:
+  index-lib-folder:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Dart
+      uses: dart-lang/setup-dart@v2
+      with:
+        sdk: stable
+
+    - name: Run Dart indexing script
+      run: |
+        dart run scripts/index_gen.dart
+
+    - name: Commit and push index files
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add lib/**/*.json
+        git commit -m "Update /lib folder index files [skip ci]" || echo "No changes to commit"
+        git push origin HEAD:${{ github.ref_name }}

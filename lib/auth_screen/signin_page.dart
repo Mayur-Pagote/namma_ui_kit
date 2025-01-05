@@ -1,86 +1,40 @@
 import "package:flutter/material.dart";
-import "package:namma_ui_kit/pages/auth_screen/signin_page.dart";
+import "package:namma_ui_kit/auth_screen/signup_page.dart";
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+class SigninPage extends StatefulWidget {
+  const SigninPage({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<SigninPage> createState() => _SigninPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
+class _SigninPageState extends State<SigninPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text("Sign up", style: TextStyle(color: Colors.white)),
+        title: const Text("Sign in", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: Container(
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text("Create your own Account",
+            const Text("Welcome back!",
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 30,
                     fontWeight: FontWeight.bold)),
             const Text(
-              "Sign up with your email",
+              "Login with your email and password",
               style: TextStyle(color: Colors.white),
             ),
             const SizedBox(
-              height: 30,
-            ),
-
-            //First Name
-            Container(
-              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-              decoration: BoxDecoration(
-                color: Colors.grey[900], // Dark background color
-                borderRadius: BorderRadius.circular(10), // Rounded corners
-              ),
-              child: TextFormField(
-                style: const TextStyle(color: Colors.white), // Text color
-                decoration: const InputDecoration(
-                  hintText: 'First Name',
-                  hintStyle:
-                      TextStyle(color: Colors.white60), // Hint text color
-                  border: InputBorder.none, // Remove default border
-                ),
-                cursorColor: Colors.white, // Cursor color
-              ),
-            ),
-            const SizedBox(
               height: 20,
             ),
-
-            //Last Name
-            Container(
-              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-              decoration: BoxDecoration(
-                color: Colors.grey[900], // Dark background color
-                borderRadius: BorderRadius.circular(10), // Rounded corners
-              ),
-              child: TextFormField(
-                style: const TextStyle(color: Colors.white), // Text color
-                decoration: const InputDecoration(
-                  hintText: 'Last Name',
-                  hintStyle:
-                      TextStyle(color: Colors.white60), // Hint text color
-                  border: InputBorder.none, // Remove default border
-                ),
-                cursorColor: Colors.white, // Cursor color
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-
-            //Email
             Container(
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
               decoration: BoxDecoration(
@@ -98,12 +52,9 @@ class _SignupPageState extends State<SignupPage> {
                 cursorColor: Colors.white, // Cursor color
               ),
             ),
-
             const SizedBox(
               height: 20,
             ),
-
-            //Password
             Container(
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
               decoration: BoxDecoration(
@@ -122,6 +73,11 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
             const SizedBox(
+              height: 10,
+            ),
+            const Text("Forget your password?",
+                style: TextStyle(color: Colors.white, fontSize: 15)),
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
@@ -130,7 +86,7 @@ class _SignupPageState extends State<SignupPage> {
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(5)))),
                 onPressed: () {},
-                child: const Text("Sign up",
+                child: const Text("Sign in",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 20,
@@ -141,7 +97,7 @@ class _SignupPageState extends State<SignupPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("Already have an account? ",
+                const Text("Not registered yet? ",
                     style: TextStyle(
                       color: Colors.white,
                     )),
@@ -150,9 +106,9 @@ class _SignupPageState extends State<SignupPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SigninPage()));
+                              builder: (context) => const SignupPage()));
                     },
-                    child: const Text("Sign in",
+                    child: const Text("Sign up",
                         style: TextStyle(
                           decoration: TextDecoration.underline,
                           color: Colors.blue,

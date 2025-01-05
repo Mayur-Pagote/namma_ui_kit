@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:namma_ui_kit/pages/auth_screen/auth_provider_page.dart';
+import 'package:namma_ui_kit/auth_screen/auth_provider_page.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

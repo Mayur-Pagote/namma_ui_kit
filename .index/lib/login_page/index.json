@@ -1,0 +1,32 @@
+{
+  "folder": "lib\\login_page",
+  "totalSize": 350,
+  "contents": [
+    {
+      "type": "directory",
+      "name": "",
+      "path": "lib\\login_page\\components",
+      "children": [
+        {
+          "type": "directory",
+          "name": "",
+          "path": "lib\\login_page\\components\\widgets",
+          "children": [
+            {
+              "type": "file",
+              "name": "widgets.dart",
+              "path": "lib\\login_page\\components\\widgets\\widgets.dart",
+              "size": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "login_page.dart",
+      "path": "lib\\login_page\\login_page.dart",
+      "size": 350
+    }
+  ]
+}
