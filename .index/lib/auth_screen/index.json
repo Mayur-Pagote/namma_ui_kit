@@ -1,24 +1,24 @@
 {
-  "folder": "lib\\auth_screen",
-  "totalSize": 15353,
+  "folder": "lib/auth_screen",
+  "totalSize": 14926,
   "contents": [
     {
       "type": "file",
-      "name": "auth_provider_page.dart",
-      "path": "lib\\auth_screen\\auth_provider_page.dart",
-      "size": 4520
+      "name": "signup_page.dart",
+      "path": "lib/auth_screen/signup_page.dart",
+      "size": 6065
     },
     {
       "type": "file",
       "name": "signin_page.dart",
-      "path": "lib\\auth_screen\\signin_page.dart",
-      "size": 4595
+      "path": "lib/auth_screen/signin_page.dart",
+      "size": 4466
     },
     {
       "type": "file",
-      "name": "signup_page.dart",
-      "path": "lib\\auth_screen\\signup_page.dart",
-      "size": 6238
+      "name": "auth_provider_page.dart",
+      "path": "lib/auth_screen/auth_provider_page.dart",
+      "size": 4395
     }
   ]
 }
