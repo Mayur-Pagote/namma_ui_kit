@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   ];
 
   List<String> descriptions = [
-    'Get your favorite food delivered right to your doorstep',
+    'Get your favorite food delivered right to your doorstep.',
     'Our chefs prepare your meals with care and expertise',
     'Share delicious moments with friends and family',
   ];
